@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reminder/counter/counter.dart';
 import 'package:reminder/l10n/l10n.dart';
+import 'package:reminder/reminder/view/reminder_page.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -9,14 +9,12 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        appBarTheme: AppBarTheme(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        ),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
         useMaterial3: true,
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: const ReminderPage(),
     );
   }
 }
